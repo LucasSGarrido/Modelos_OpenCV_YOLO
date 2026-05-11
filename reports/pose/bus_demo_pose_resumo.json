@@ -1,0 +1,16 @@
+{
+  "model_task": "keypoint_detection_video",
+  "input_path": "data\\samples\\bus_demo.mp4",
+  "output_path": "reports\\pose\\bus_demo_pose_processado.mp4",
+  "summary_path": "reports\\pose\\bus_demo_pose_resumo.json",
+  "csv_output": "reports\\pose\\bus_demo_pose_frames.csv",
+  "frames_read": 20,
+  "frames_processed": 4,
+  "max_people": 4,
+  "last_frame_people": 4,
+  "max_visible_keypoints": 55,
+  "last_frame_visible_keypoints": 52,
+  "average_keypoint_confidence": 0.6335,
+  "average_processing_fps": 25.3189,
+  "processing_seconds": 0.3669
+}

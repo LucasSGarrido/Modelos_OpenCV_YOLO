@@ -1,0 +1,31 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.streamlit/*.log
+
+# Dados e artefatos pesados
+data/raw/
+data/interim/
+data/processed/
+reports/app/*
+!reports/app/.gitkeep
+reports/batch/*
+!reports/batch/.gitkeep
+reports/pose/youtube_*
+reports/segmentation/youtube_*
+reports/pose/*_20??????_??????_*
+reports/segmentation/*_20??????_??????_*
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.pt
+*.onnx
+
+# Permite versionar arquivos de documentação nas pastas de saída.
+!reports/figures/.gitkeep
+!reports/videos/.gitkeep

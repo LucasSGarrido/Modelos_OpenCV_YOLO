@@ -1,0 +1,23 @@
+{
+  "sample_count": 2,
+  "metric_rows": 7,
+  "total_absolute_error": 0.0,
+  "mean_absolute_error": 0.0,
+  "within_tolerance_rate": 1.0,
+  "by_task": {
+    "segmentation": {
+      "rows": 4,
+      "total_absolute_error": 0.0,
+      "ok_rows": 4,
+      "mean_absolute_error": 0.0,
+      "within_tolerance_rate": 1.0
+    },
+    "pose": {
+      "rows": 3,
+      "total_absolute_error": 0.0,
+      "ok_rows": 3,
+      "mean_absolute_error": 0.0,
+      "within_tolerance_rate": 1.0
+    }
+  }
+}

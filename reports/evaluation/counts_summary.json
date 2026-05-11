@@ -1,0 +1,8 @@
+{
+  "sample_count": 4,
+  "class_rows": 14,
+  "total_absolute_error": 30,
+  "mean_absolute_count_error": 7.5,
+  "mean_absolute_percentage_error": 0.2587,
+  "exact_count_match_rate": 0.5
+}

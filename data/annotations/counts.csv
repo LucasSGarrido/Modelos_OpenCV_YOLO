@@ -1,0 +1,15 @@
+sample_id,input_path,summary_path,media_type,counting_mode,class_name,expected_count,condition_tags,manual_error_type,notes
+bus_image,data/samples/bus.jpg,reports/figures/bus_processado.json,image,image,bus,1,,,Amostra visual local do Ultralytics
+bus_image,data/samples/bus.jpg,reports/figures/bus_processado.json,image,image,person,3,,,Amostra visual local do Ultralytics
+bus_image,data/samples/bus.jpg,reports/figures/bus_processado.json,image,image,car,0,,,Controle negativo para falso positivo
+bus_image,data/samples/bus.jpg,reports/figures/bus_processado.json,image,image,truck,0,,,Controle negativo para falso positivo
+bus_demo_line,data/samples/bus_demo.mp4,reports/videos/bus_demo_line.json,video,line,bus,1,,,Demo sintética para validar cruzamento de linha
+bus_demo_line,data/samples/bus_demo.mp4,reports/videos/bus_demo_line.json,video,line,person,3,,,Demo sintética para validar cruzamento de linha
+bus_demo_line,data/samples/bus_demo.mp4,reports/videos/bus_demo_line.json,video,line,car,0,,,Controle negativo para falso positivo em vídeo
+bus_demo_line,data/samples/bus_demo.mp4,reports/videos/bus_demo_line.json,video,line,truck,0,,,Controle negativo para falso positivo em vídeo
+real_traffic_bus_france,data/samples/real_traffic_bus_france.jpg,reports/real/real_traffic_bus_france.json,image,image,bus,6,oclusao|objeto_pequeno,,Amostra real Wikimedia Commons; contagem manual focada em ônibus visíveis
+real_traffic_bus_france,data/samples/real_traffic_bus_france.jpg,reports/real/real_traffic_bus_france.json,image,image,car,24,oclusao|objeto_pequeno|contagem_aproximada,,Contagem manual aproximada de carros visíveis na fila de trânsito
+real_traffic_bus_france,data/samples/real_traffic_bus_france.jpg,reports/real/real_traffic_bus_france.json,image,image,truck,1,classe_confusa|oclusao,,Veículo branco grande tratado como truck/van para avaliação COCO
+real_intersection_auckland,data/samples/real_intersection_auckland.jpg,reports/real/real_intersection_auckland.json,image,image,bus,2,objeto_pequeno,,Amostra real Wikimedia Commons; ônibus/veículo amarelo visível
+real_intersection_auckland,data/samples/real_intersection_auckland.jpg,reports/real/real_intersection_auckland.json,image,image,car,24,objeto_pequeno|oclusao|contagem_aproximada,,Contagem manual aproximada de carros visíveis no cruzamento
+real_intersection_auckland,data/samples/real_intersection_auckland.jpg,reports/real/real_intersection_auckland.json,image,image,truck,1,objeto_pequeno|classe_confusa,,Veiculo utilitario branco no canto inferior direito

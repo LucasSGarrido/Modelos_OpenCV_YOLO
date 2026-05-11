@@ -1,0 +1,22 @@
+{
+  "model_task": "instance_segmentation_video",
+  "input_path": "data\\samples\\bus_demo.mp4",
+  "output_path": "reports\\segmentation\\bus_demo_seg_processado.mp4",
+  "summary_path": "reports\\segmentation\\bus_demo_seg_resumo.json",
+  "csv_output": "reports\\segmentation\\bus_demo_seg_frames.csv",
+  "frames_read": 20,
+  "frames_processed": 4,
+  "max_counts_by_class": {
+    "bus": 1,
+    "person": 4
+  },
+  "last_frame_counts": {
+    "bus": 1,
+    "person": 4
+  },
+  "max_frame_total": 5,
+  "last_frame_total": 5,
+  "last_frame_mask_area": 375494.8,
+  "average_processing_fps": 16.4028,
+  "processing_seconds": 0.4861
+}

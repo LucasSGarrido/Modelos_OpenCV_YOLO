@@ -1,0 +1,232 @@
+{
+  "best_config": {
+    "confidence": 0.25,
+    "iou": 0.7,
+    "sample_count": 4,
+    "class_rows": 14,
+    "total_absolute_error": 22,
+    "mean_absolute_count_error": 5.5,
+    "mean_absolute_percentage_error": 0.2994,
+    "exact_count_match_rate": 0.0,
+    "false_positive_count": 5,
+    "false_negative_count": 17,
+    "processing_seconds": 2.3401
+  },
+  "classes": [
+    "bus",
+    "car",
+    "person",
+    "truck"
+  ],
+  "configs_tested": 24,
+  "samples": [
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line"
+    },
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image"
+    },
+    {
+      "sample_id": "real_intersection_auckland",
+      "input_path": "data/samples/real_intersection_auckland.jpg",
+      "media_type": "image",
+      "counting_mode": "image"
+    },
+    {
+      "sample_id": "real_traffic_bus_france",
+      "input_path": "data/samples/real_traffic_bus_france.jpg",
+      "media_type": "image",
+      "counting_mode": "image"
+    }
+  ],
+  "details": [
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "bus",
+      "expected_count": 1,
+      "predicted_count": 1,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Amostra visual local do Ultralytics"
+    },
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "person",
+      "expected_count": 3,
+      "predicted_count": 4,
+      "absolute_error": 1,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Amostra visual local do Ultralytics"
+    },
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "car",
+      "expected_count": 0,
+      "predicted_count": 0,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Controle negativo para falso positivo"
+    },
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "truck",
+      "expected_count": 0,
+      "predicted_count": 0,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Controle negativo para falso positivo"
+    },
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line",
+      "class_name": "bus",
+      "expected_count": 1,
+      "predicted_count": 2,
+      "absolute_error": 1,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Demo sintetica para validar cruzamento de linha"
+    },
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line",
+      "class_name": "person",
+      "expected_count": 3,
+      "predicted_count": 3,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Demo sintetica para validar cruzamento de linha"
+    },
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line",
+      "class_name": "car",
+      "expected_count": 0,
+      "predicted_count": 0,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Controle negativo para falso positivo em video"
+    },
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line",
+      "class_name": "truck",
+      "expected_count": 0,
+      "predicted_count": 0,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Controle negativo para falso positivo em video"
+    },
+    {
+      "sample_id": "real_traffic_bus_france",
+      "input_path": "data/samples/real_traffic_bus_france.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "bus",
+      "expected_count": 6,
+      "predicted_count": 5,
+      "absolute_error": 1,
+      "condition_tags": "oclusao|objeto_pequeno",
+      "manual_error_type": "",
+      "notes": "Amostra real Wikimedia Commons; contagem manual focada em onibus visiveis"
+    },
+    {
+      "sample_id": "real_traffic_bus_france",
+      "input_path": "data/samples/real_traffic_bus_france.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "car",
+      "expected_count": 24,
+      "predicted_count": 16,
+      "absolute_error": 8,
+      "condition_tags": "oclusao|objeto_pequeno|contagem_aproximada",
+      "manual_error_type": "",
+      "notes": "Contagem manual aproximada de carros visiveis na fila de transito"
+    },
+    {
+      "sample_id": "real_traffic_bus_france",
+      "input_path": "data/samples/real_traffic_bus_france.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "truck",
+      "expected_count": 1,
+      "predicted_count": 1,
+      "absolute_error": 0,
+      "condition_tags": "classe_confusa|oclusao",
+      "manual_error_type": "",
+      "notes": "Veiculo branco grande tratado como truck/van para avaliacao COCO"
+    },
+    {
+      "sample_id": "real_intersection_auckland",
+      "input_path": "data/samples/real_intersection_auckland.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "bus",
+      "expected_count": 2,
+      "predicted_count": 1,
+      "absolute_error": 1,
+      "condition_tags": "objeto_pequeno",
+      "manual_error_type": "",
+      "notes": "Amostra real Wikimedia Commons; onibus/veiculo amarelo visivel"
+    },
+    {
+      "sample_id": "real_intersection_auckland",
+      "input_path": "data/samples/real_intersection_auckland.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "car",
+      "expected_count": 24,
+      "predicted_count": 17,
+      "absolute_error": 7,
+      "condition_tags": "objeto_pequeno|oclusao|contagem_aproximada",
+      "manual_error_type": "",
+      "notes": "Contagem manual aproximada de carros visiveis no cruzamento"
+    },
+    {
+      "sample_id": "real_intersection_auckland",
+      "input_path": "data/samples/real_intersection_auckland.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "truck",
+      "expected_count": 1,
+      "predicted_count": 4,
+      "absolute_error": 3,
+      "condition_tags": "objeto_pequeno|classe_confusa",
+      "manual_error_type": "",
+      "notes": "Veiculo utilitario branco no canto inferior direito"
+    }
+  ]
+}

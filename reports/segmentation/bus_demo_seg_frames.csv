@@ -1,0 +1,5 @@
+frame_index,timestamp_seconds,processing_seconds,fps_estimate,frame_total,frame_counts_json,frame_mask_area
+0,0.0,0.118758,8.4205,4,"{""bus"": 1, ""person"": 3}",363635.74
+5,0.2083,0.043464,23.0077,5,"{""bus"": 1, ""person"": 4}",371973.67
+10,0.4167,0.040373,24.7692,5,"{""bus"": 1, ""person"": 4}",375200.07
+15,0.625,0.041267,24.2323,5,"{""bus"": 1, ""person"": 4}",375494.8

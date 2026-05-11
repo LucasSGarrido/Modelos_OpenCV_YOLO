@@ -1,0 +1,8 @@
+sample_id,task,input_path,summary_path,media_type,metric_name,expected_value,tolerance,condition_tags,manual_error_type,notes
+bus_segmentation_image,segmentation,data/samples/bus.jpg,reports/segmentation/bus_seg_resumo.json,image,instance_total,5,0,baseline_bus,,Contagem manual inicial de instancias segmentadas na amostra bus.jpg
+bus_segmentation_image,segmentation,data/samples/bus.jpg,reports/segmentation/bus_seg_resumo.json,image,class:bus,1,0,baseline_bus,,Onibus principal esperado na cena
+bus_segmentation_image,segmentation,data/samples/bus.jpg,reports/segmentation/bus_seg_resumo.json,image,class:person,4,0,oclusao|baseline_bus,,Pessoas visíveis na cena com oclusão parcial
+bus_segmentation_image,segmentation,data/samples/bus.jpg,reports/segmentation/bus_seg_resumo.json,image,mask_area_total,376317.77,2000,baseline_bus,,Área total da máscara usada como baseline de regressão
+bus_pose_image,pose,data/samples/bus.jpg,reports/pose/bus_pose_resumo.json,image,person_total,4,0,oclusao|baseline_bus,,Pessoas esperadas para estimativa de pose na amostra bus.jpg
+bus_pose_image,pose,data/samples/bus.jpg,reports/pose/bus_pose_resumo.json,image,visible_keypoints,50,3,oclusao|baseline_bus,,Keypoints visíveis aceitando pequena variação por modelo/threshold
+bus_pose_image,pose,data/samples/bus.jpg,reports/pose/bus_pose_resumo.json,image,average_keypoint_confidence,0.6155,0.05,oclusao|baseline_bus,,Confiança média usada como baseline de regressão

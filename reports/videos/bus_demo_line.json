@@ -1,0 +1,29 @@
+{
+  "input_path": "data\\samples\\bus_demo.mp4",
+  "output_path": "reports\\videos\\bus_demo_line.mp4",
+  "summary_path": "reports\\videos\\bus_demo_line.json",
+  "csv_output": "reports/videos/bus_demo_line.csv",
+  "frames_read": 72,
+  "frames_processed": 72,
+  "max_counts_by_class": {
+    "bus": 2,
+    "person": 4
+  },
+  "last_frame_counts": {
+    "bus": 1,
+    "person": 4
+  },
+  "line_counts_by_class": {
+    "bus": 1,
+    "person": 3
+  },
+  "total_line_crossings": 4,
+  "line_config": {
+    "orientation": "horizontal",
+    "position_ratio": 0.5,
+    "direction": "positive"
+  },
+  "average_processing_fps": 33.4073,
+  "processing_seconds": 2.8385,
+  "counting_mode": "line"
+}

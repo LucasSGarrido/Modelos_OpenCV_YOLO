@@ -1,0 +1,475 @@
+{
+  "model_task": "keypoint_detection",
+  "input_path": "data\\samples\\bus.jpg",
+  "output_path": "reports\\pose\\bus_pose_processado.jpg",
+  "summary_path": "reports\\pose\\bus_pose_resumo.json",
+  "counts": {
+    "person": 4
+  },
+  "total": 4,
+  "visible_keypoints": 50,
+  "average_keypoint_confidence": 0.6155,
+  "inference_seconds": 0.046287,
+  "poses": [
+    {
+      "x1": 45.28,
+      "y1": 396.87,
+      "x2": 242.46,
+      "y2": 906.22,
+      "confidence": 0.8908,
+      "class_id": 0,
+      "label": "person",
+      "visible_keypoints": 17,
+      "average_keypoint_confidence": 0.9336,
+      "keypoints": [
+        {
+          "name": "nose",
+          "x": 143.75,
+          "y": 443.51,
+          "confidence": 0.9834
+        },
+        {
+          "name": "left_eye",
+          "x": 149.06,
+          "y": 435.15,
+          "confidence": 0.9026
+        },
+        {
+          "name": "right_eye",
+          "x": 133.69,
+          "y": 434.69,
+          "confidence": 0.9725
+        },
+        {
+          "name": "left_ear",
+          "x": 151.99,
+          "y": 440.7,
+          "confidence": 0.4235
+        },
+        {
+          "name": "right_ear",
+          "x": 107.29,
+          "y": 438.99,
+          "confidence": 0.8832
+        },
+        {
+          "name": "left_shoulder",
+          "x": 163.19,
+          "y": 494.33,
+          "confidence": 0.988
+        },
+        {
+          "name": "right_shoulder",
+          "x": 88.73,
+          "y": 496.41,
+          "confidence": 0.9944
+        },
+        {
+          "name": "left_elbow",
+          "x": 191.32,
+          "y": 561.59,
+          "confidence": 0.9423
+        },
+        {
+          "name": "right_elbow",
+          "x": 115.68,
+          "y": 572.14,
+          "confidence": 0.9838
+        },
+        {
+          "name": "left_wrist",
+          "x": 157.38,
+          "y": 537.59,
+          "confidence": 0.9081
+        },
+        {
+          "name": "right_wrist",
+          "x": 149.47,
+          "y": 565.3,
+          "confidence": 0.9681
+        },
+        {
+          "name": "left_hip",
+          "x": 156.17,
+          "y": 641.19,
+          "confidence": 0.9963
+        },
+        {
+          "name": "right_hip",
+          "x": 98.2,
+          "y": 642.76,
+          "confidence": 0.9976
+        },
+        {
+          "name": "left_knee",
+          "x": 182.17,
+          "y": 750.77,
+          "confidence": 0.9922
+        },
+        {
+          "name": "right_knee",
+          "x": 90.46,
+          "y": 759.1,
+          "confidence": 0.9955
+        },
+        {
+          "name": "left_ankle",
+          "x": 189.3,
+          "y": 852.22,
+          "confidence": 0.9649
+        },
+        {
+          "name": "right_ankle",
+          "x": 72.58,
+          "y": 866.97,
+          "confidence": 0.9755
+        }
+      ]
+    },
+    {
+      "x1": 669.5,
+      "y1": 390.11,
+      "x2": 809.98,
+      "y2": 877.95,
+      "confidence": 0.8801,
+      "class_id": 0,
+      "label": "person",
+      "visible_keypoints": 12,
+      "average_keypoint_confidence": 0.433,
+      "keypoints": [
+        {
+          "name": "nose",
+          "x": 799.86,
+          "y": 436.49,
+          "confidence": 0.248
+        },
+        {
+          "name": "left_eye",
+          "x": 801.3,
+          "y": 429.14,
+          "confidence": 0.2881
+        },
+        {
+          "name": "right_eye",
+          "x": 799.84,
+          "y": 425.75,
+          "confidence": 0.078
+        },
+        {
+          "name": "left_ear",
+          "x": 798.81,
+          "y": 434.67,
+          "confidence": 0.4205
+        },
+        {
+          "name": "right_ear",
+          "x": 807.8,
+          "y": 428.27,
+          "confidence": 0.0768
+        },
+        {
+          "name": "left_shoulder",
+          "x": 805.34,
+          "y": 486.99,
+          "confidence": 0.6773
+        },
+        {
+          "name": "right_shoulder",
+          "x": 807.59,
+          "y": 485.52,
+          "confidence": 0.3295
+        },
+        {
+          "name": "left_elbow",
+          "x": 789.6,
+          "y": 562.13,
+          "confidence": 0.5977
+        },
+        {
+          "name": "right_elbow",
+          "x": 796.99,
+          "y": 564.16,
+          "confidence": 0.1352
+        },
+        {
+          "name": "left_wrist",
+          "x": 763.66,
+          "y": 573.08,
+          "confidence": 0.4842
+        },
+        {
+          "name": "right_wrist",
+          "x": 770.71,
+          "y": 562.75,
+          "confidence": 0.1554
+        },
+        {
+          "name": "left_hip",
+          "x": 803.53,
+          "y": 645.0,
+          "confidence": 0.7036
+        },
+        {
+          "name": "right_hip",
+          "x": 804.84,
+          "y": 641.73,
+          "confidence": 0.5158
+        },
+        {
+          "name": "left_knee",
+          "x": 766.91,
+          "y": 738.12,
+          "confidence": 0.7901
+        },
+        {
+          "name": "right_knee",
+          "x": 770.28,
+          "y": 739.57,
+          "confidence": 0.6256
+        },
+        {
+          "name": "left_ankle",
+          "x": 724.06,
+          "y": 835.87,
+          "confidence": 0.6794
+        },
+        {
+          "name": "right_ankle",
+          "x": 725.54,
+          "y": 839.66,
+          "confidence": 0.556
+        }
+      ]
+    },
+    {
+      "x1": 224.18,
+      "y1": 404.38,
+      "x2": 344.4,
+      "y2": 855.73,
+      "confidence": 0.8732,
+      "class_id": 0,
+      "label": "person",
+      "visible_keypoints": 17,
+      "average_keypoint_confidence": 0.948,
+      "keypoints": [
+        {
+          "name": "nose",
+          "x": 292.58,
+          "y": 447.6,
+          "confidence": 0.979
+        },
+        {
+          "name": "left_eye",
+          "x": 300.62,
+          "y": 441.03,
+          "confidence": 0.9192
+        },
+        {
+          "name": "right_eye",
+          "x": 283.56,
+          "y": 439.55,
+          "confidence": 0.9572
+        },
+        {
+          "name": "left_ear",
+          "x": 307.39,
+          "y": 447.63,
+          "confidence": 0.6509
+        },
+        {
+          "name": "right_ear",
+          "x": 263.87,
+          "y": 444.29,
+          "confidence": 0.8552
+        },
+        {
+          "name": "left_shoulder",
+          "x": 315.17,
+          "y": 498.05,
+          "confidence": 0.9927
+        },
+        {
+          "name": "right_shoulder",
+          "x": 248.08,
+          "y": 496.22,
+          "confidence": 0.996
+        },
+        {
+          "name": "left_elbow",
+          "x": 330.34,
+          "y": 560.27,
+          "confidence": 0.9578
+        },
+        {
+          "name": "right_elbow",
+          "x": 248.09,
+          "y": 579.52,
+          "confidence": 0.9788
+        },
+        {
+          "name": "left_wrist",
+          "x": 279.1,
+          "y": 532.41,
+          "confidence": 0.9308
+        },
+        {
+          "name": "right_wrist",
+          "x": 261.55,
+          "y": 648.16,
+          "confidence": 0.9568
+        },
+        {
+          "name": "left_hip",
+          "x": 301.46,
+          "y": 628.14,
+          "confidence": 0.9974
+        },
+        {
+          "name": "right_hip",
+          "x": 255.75,
+          "y": 626.99,
+          "confidence": 0.9979
+        },
+        {
+          "name": "left_knee",
+          "x": 295.82,
+          "y": 719.67,
+          "confidence": 0.9942
+        },
+        {
+          "name": "right_knee",
+          "x": 262.07,
+          "y": 725.27,
+          "confidence": 0.9957
+        },
+        {
+          "name": "left_ankle",
+          "x": 283.68,
+          "y": 801.02,
+          "confidence": 0.9758
+        },
+        {
+          "name": "right_ankle",
+          "x": 265.16,
+          "y": 820.25,
+          "confidence": 0.9802
+        }
+      ]
+    },
+    {
+      "x1": 0.0,
+      "y1": 485.22,
+      "x2": 71.96,
+      "y2": 893.21,
+      "confidence": 0.4126,
+      "class_id": 0,
+      "label": "person",
+      "visible_keypoints": 4,
+      "average_keypoint_confidence": 0.1475,
+      "keypoints": [
+        {
+          "name": "nose",
+          "x": 0.0,
+          "y": 603.96,
+          "confidence": 0.015
+        },
+        {
+          "name": "left_eye",
+          "x": 0.0,
+          "y": 597.15,
+          "confidence": 0.0116
+        },
+        {
+          "name": "right_eye",
+          "x": 0.0,
+          "y": 597.59,
+          "confidence": 0.0076
+        },
+        {
+          "name": "left_ear",
+          "x": 0.0,
+          "y": 592.68,
+          "confidence": 0.0448
+        },
+        {
+          "name": "right_ear",
+          "x": 0.0,
+          "y": 593.58,
+          "confidence": 0.0246
+        },
+        {
+          "name": "left_shoulder",
+          "x": 3.6,
+          "y": 616.76,
+          "confidence": 0.1564
+        },
+        {
+          "name": "right_shoulder",
+          "x": 3.11,
+          "y": 617.81,
+          "confidence": 0.0814
+        },
+        {
+          "name": "left_elbow",
+          "x": 22.39,
+          "y": 671.64,
+          "confidence": 0.323
+        },
+        {
+          "name": "right_elbow",
+          "x": 21.7,
+          "y": 678.39,
+          "confidence": 0.1354
+        },
+        {
+          "name": "left_wrist",
+          "x": 41.11,
+          "y": 724.49,
+          "confidence": 0.2901
+        },
+        {
+          "name": "right_wrist",
+          "x": 39.95,
+          "y": 727.1,
+          "confidence": 0.1455
+        },
+        {
+          "name": "left_hip",
+          "x": 4.7,
+          "y": 714.38,
+          "confidence": 0.3322
+        },
+        {
+          "name": "right_hip",
+          "x": 5.5,
+          "y": 715.15,
+          "confidence": 0.2588
+        },
+        {
+          "name": "left_knee",
+          "x": 11.46,
+          "y": 766.28,
+          "confidence": 0.2427
+        },
+        {
+          "name": "right_knee",
+          "x": 12.61,
+          "y": 767.36,
+          "confidence": 0.1918
+        },
+        {
+          "name": "left_ankle",
+          "x": 8.75,
+          "y": 846.78,
+          "confidence": 0.1332
+        },
+        {
+          "name": "right_ankle",
+          "x": 7.99,
+          "y": 848.29,
+          "confidence": 0.1128
+        }
+      ]
+    }
+  ]
+}

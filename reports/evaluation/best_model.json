@@ -1,0 +1,105 @@
+{
+  "best_model": {
+    "confidence": 0.3,
+    "iou": 0.4,
+    "sample_count": 4,
+    "class_rows": 6,
+    "total_absolute_error": 2,
+    "mean_absolute_count_error": 0.5,
+    "mean_absolute_percentage_error": 0.1667,
+    "exact_count_match_rate": 0.5,
+    "false_positive_count": 0,
+    "false_negative_count": 2,
+    "processing_seconds": 4.423,
+    "model": "yolov8n.pt",
+    "seconds_per_sample": 1.1058
+  },
+  "models_tested": [
+    "yolov8n.pt",
+    "yolov8s.pt"
+  ],
+  "classes": [
+    "bus",
+    "person"
+  ],
+  "details": [
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "bus",
+      "expected_count": 1,
+      "predicted_count": 1,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Amostra visual local do Ultralytics"
+    },
+    {
+      "sample_id": "bus_image",
+      "input_path": "data/samples/bus.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "person",
+      "expected_count": 3,
+      "predicted_count": 3,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Amostra visual local do Ultralytics"
+    },
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line",
+      "class_name": "bus",
+      "expected_count": 1,
+      "predicted_count": 1,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Demo sintética para validar cruzamento de linha"
+    },
+    {
+      "sample_id": "bus_demo_line",
+      "input_path": "data/samples/bus_demo.mp4",
+      "media_type": "video",
+      "counting_mode": "line",
+      "class_name": "person",
+      "expected_count": 3,
+      "predicted_count": 3,
+      "absolute_error": 0,
+      "condition_tags": "",
+      "manual_error_type": "",
+      "notes": "Demo sintética para validar cruzamento de linha"
+    },
+    {
+      "sample_id": "real_traffic_bus_france",
+      "input_path": "data/samples/real_traffic_bus_france.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "bus",
+      "expected_count": 6,
+      "predicted_count": 5,
+      "absolute_error": 1,
+      "condition_tags": "oclusao|objeto_pequeno",
+      "manual_error_type": "",
+      "notes": "Amostra real Wikimedia Commons; contagem manual focada em ônibus visíveis"
+    },
+    {
+      "sample_id": "real_intersection_auckland",
+      "input_path": "data/samples/real_intersection_auckland.jpg",
+      "media_type": "image",
+      "counting_mode": "image",
+      "class_name": "bus",
+      "expected_count": 2,
+      "predicted_count": 1,
+      "absolute_error": 1,
+      "condition_tags": "objeto_pequeno",
+      "manual_error_type": "",
+      "notes": "Amostra real Wikimedia Commons; contagem manual focada em ônibus/ônibus amarelo visíveis"
+    }
+  ]
+}

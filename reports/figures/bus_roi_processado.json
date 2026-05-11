@@ -1,0 +1,49 @@
+{
+  "input_path": "data\\samples\\bus.jpg",
+  "output_path": "reports\\figures\\bus_roi_processado.jpg",
+  "summary_path": "reports\\figures\\bus_roi_processado.json",
+  "counts": {
+    "bus": 1,
+    "person": 2
+  },
+  "total": 3,
+  "inference_seconds": 0.131076,
+  "detections": [
+    {
+      "x1": 22.87126922607422,
+      "y1": 231.2772674560547,
+      "x2": 805.0025634765625,
+      "y2": 756.8403930664062,
+      "confidence": 0.8734484910964966,
+      "class_id": 5,
+      "label": "bus",
+      "track_id": null
+    },
+    {
+      "x1": 48.55046844482422,
+      "y1": 398.5522155761719,
+      "x2": 245.34556579589844,
+      "y2": 902.7026977539062,
+      "confidence": 0.8656914234161377,
+      "class_id": 0,
+      "label": "person",
+      "track_id": null
+    },
+    {
+      "x1": 221.51730346679688,
+      "y1": 405.7985534667969,
+      "x2": 344.97064208984375,
+      "y2": 857.53662109375,
+      "confidence": 0.8252246379852295,
+      "class_id": 0,
+      "label": "person",
+      "track_id": null
+    }
+  ],
+  "roi_config": {
+    "x_min": 0.0,
+    "y_min": 0.3,
+    "x_max": 0.55,
+    "y_max": 1.0
+  }
+}

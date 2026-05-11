@@ -1,0 +1,3 @@
+sample_id,file_name,source_url,author,license,license_url,downloaded_at,notes
+real_traffic_bus_france,real_traffic_bus_france.jpg,https://commons.wikimedia.org/wiki/File:Embouteillage_Bus.JPG,Cartedd,Public domain,https://commons.wikimedia.org/wiki/File:Embouteillage_Bus.JPG,2026-05-11,Amostra real de tráfego com ônibus e carros; usada para avaliação de contagem por classe bus.
+real_intersection_auckland,real_intersection_auckland.jpg,https://commons.wikimedia.org/wiki/File:Intersection_Almost_Jammed_Up.jpg,Ingolfson,Public domain,https://commons.wikimedia.org/wiki/File:Intersection_Almost_Jammed_Up.jpg,2026-05-11,Amostra real de cruzamento urbano; usada para avaliação de contagem por classe bus.
