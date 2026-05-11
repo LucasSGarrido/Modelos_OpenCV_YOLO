@@ -79,12 +79,22 @@ def test_download_media_url_rejects_html_response(monkeypatch, tmp_path) -> None
 
 
 def test_download_media_url_uses_youtube_downloader(monkeypatch, tmp_path) -> None:
+    _FakeYoutubeModule.last_options = None
     monkeypatch.setattr(downloads, "_load_youtube_dl", lambda: _FakeYoutubeModule)
 
     path = downloads.download_media_url("https://youtu.be/abc123", tmp_path)
 
     assert path.name == "youtube_abc123.mp4"
     assert path.read_bytes() == b"youtube"
+    assert _FakeYoutubeModule.last_options["merge_output_format"] == "mp4"
+    assert "http_headers" in _FakeYoutubeModule.last_options
+
+
+def test_download_media_url_explains_youtube_403(monkeypatch, tmp_path) -> None:
+    monkeypatch.setattr(downloads, "_load_youtube_dl", lambda: _FailingYoutubeModule)
+
+    with pytest.raises(ValueError, match="YouTube bloqueou"):
+        downloads.download_media_url("https://youtu.be/abc123", tmp_path)
 
 
 class _FakeResponse:
@@ -103,9 +113,12 @@ class _FakeResponse:
 
 
 class _FakeYoutubeModule:
+    last_options = None
+
     class YoutubeDL:
         def __init__(self, options):
             self.options = options
+            _FakeYoutubeModule.last_options = options
 
         def __enter__(self):
             return self
@@ -118,3 +131,18 @@ class _FakeYoutubeModule:
             with open(output, "wb") as file:
                 file.write(b"youtube")
             return {"id": "abc123"}
+
+
+class _FailingYoutubeModule:
+    class YoutubeDL:
+        def __init__(self, options):
+            self.options = options
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, traceback) -> None:  # noqa: ANN001
+            return None
+
+        def extract_info(self, url: str, download: bool):  # noqa: FBT001
+            raise RuntimeError("ERROR: unable to download video data: HTTP Error 403: Forbidden")

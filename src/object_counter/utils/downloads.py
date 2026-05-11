@@ -11,6 +11,11 @@ from object_counter.utils.io import ensure_parent_dir
 
 SUPPORTED_URL_EXTENSIONS = IMAGE_EXTENSIONS | VIDEO_EXTENSIONS
 DEFAULT_MAX_DOWNLOAD_BYTES = 250 * 1024 * 1024
+YOUTUBE_BLOCKED_MESSAGE = (
+    "O YouTube bloqueou o download server-side deste vídeo (HTTP 403). "
+    "No Streamlit Cloud isso pode acontecer mesmo quando a prévia aparece no navegador. "
+    "Use upload, um link direto .mp4, Google Drive/Dropbox público, ou tente outro vídeo."
+)
 
 
 def media_filename_from_url(url: str) -> str:
@@ -208,15 +213,36 @@ def download_youtube_url(
     output_template = str(output_dir / f"{Path(filename).stem}.%(ext)s")
 
     options = {
-        "format": "best[ext=mp4]/best",
+        "format": (
+            "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/"
+            "best[ext=mp4][height<=720]/best[height<=720]/best"
+        ),
         "outtmpl": output_template,
+        "merge_output_format": "mp4",
         "noplaylist": True,
         "quiet": True,
         "no_warnings": True,
         "max_filesize": max_bytes,
+        "retries": 2,
+        "fragment_retries": 2,
+        "socket_timeout": 30,
+        "http_headers": {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0 Safari/537.36"
+            ),
+            "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        },
+        "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
     }
-    with youtube_dl.YoutubeDL(options) as ydl:
-        ydl.extract_info(url.strip(), download=True)
+    try:
+        with youtube_dl.YoutubeDL(options) as ydl:
+            ydl.extract_info(url.strip(), download=True)
+    except Exception as exc:
+        if _is_youtube_blocked_error(exc):
+            raise ValueError(YOUTUBE_BLOCKED_MESSAGE) from exc
+        raise
 
     candidates = sorted(output_dir.glob(f"{Path(filename).stem}.*"))
     if not candidates:
@@ -243,6 +269,18 @@ def _prefer_mp4(paths: list[Path]) -> Path:
         if path.suffix.lower() == ".mp4":
             return path
     return paths[0]
+
+
+def _is_youtube_blocked_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    blocked_markers = [
+        "403",
+        "forbidden",
+        "unable to download video data",
+        "sign in to confirm",
+        "not a bot",
+    ]
+    return any(marker in message for marker in blocked_markers)
 
 
 def sanitize_filename(filename: str) -> str:
