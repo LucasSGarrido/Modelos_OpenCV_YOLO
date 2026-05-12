@@ -1,5 +1,7 @@
 # Contador Inteligente de Objetos com OpenCV e YOLO
 
+**App publicado:** https://modelosopencvyolo-8s2rzrw9rhghax8t6cozje.streamlit.app
+
 Projeto de visão computacional para detectar e contar **pessoas e veículos** em imagens e vídeos. A solução usa YOLO como detector, OpenCV para leitura e exportação de mídia, e gera uma saída visual com bounding boxes, labels, confiança, contagem por classe e métricas básicas de desempenho.
 
 > Status: MVP técnico em evolução. O projeto já possui estrutura, CLI, módulos principais, interface, testes, contagem por frame, contagem por linha, tracking por centroide ou ByteTrack, filtro por ROI, ROI desenhável em imagem/vídeo, comparação entre execuções, comparação de modelos YOLO, relatórios Markdown/HTML, batch de imagens, otimizador de confidence/IOU, página de treinamento customizado, GIF de demonstração, Dockerfile e avaliação manual com amostras reais. O domínio definido é pessoas e veículos.
