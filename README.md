@@ -114,7 +114,7 @@ A aplicação Streamlit foi organizada em páginas operacionais:
 - página `Segmentação de Instâncias`, usando modelos YOLO `*-seg.pt` para máscaras, polígonos e área aproximada por instância em imagens e vídeos curtos;
 - página `Keypoints / Pose`, usando modelos YOLO `*-pose.pt` para detectar pessoas, pontos corporais e esqueleto em imagens e vídeos curtos;
 - página `Treinamento Customizado`, com orientação sobre marcações, volume recomendado, estrutura YOLO, `data.yaml` e comando de treino;
-- entrada por upload, amostra local, URL direta de arquivo de mídia, URL do YouTube, Google Drive público ou Dropbox;
+- entrada por upload, amostra local, URL direta de arquivo de mídia, Google Drive público ou Dropbox;
 - indicação da origem ativa quando upload, URL e amostra local aparecem juntos;
 - validação do tipo de peso nas páginas especializadas, evitando usar modelo de detecção comum em tarefa de segmentação ou pose;
 - ROI por sliders também nas páginas de segmentação e pose;
@@ -144,7 +144,7 @@ A aplicação Streamlit foi organizada em páginas operacionais:
 - saídas de segmentação persistidas em `reports/segmentation/`;
 - saídas de pose/keypoints persistidas em `reports/pose/`.
 
-Observação sobre URLs: a interface aceita links diretos para arquivos de mídia, como `.mp4`, `.mov`, `.avi`, `.mkv`, `.webm`, `.jpg` e `.png`, URLs do YouTube via `yt-dlp`, links públicos do Google Drive e links compartilhados do Dropbox. Use apenas vídeos que você tem direito de processar.
+Observação sobre URLs: a interface aceita links diretos para arquivos de mídia, como `.mp4`, `.mov`, `.avi`, `.mkv`, `.webm`, `.jpg` e `.png`, links públicos do Google Drive e links compartilhados do Dropbox. URLs do YouTube podem funcionar localmente via `yt-dlp`, mas no Streamlit Cloud frequentemente são bloqueadas por HTTP 403 durante o download server-side. Para o app publicado, prefira upload, amostra local, link direto, Google Drive ou Dropbox. Use apenas vídeos que você tem direito de processar.
 
 ## 5. Arquitetura
 
@@ -373,7 +373,7 @@ Observação: os resultados atuais já incluem duas imagens reais, mas o conjunt
 - As opções de classe da interface seguem as 80 classes COCO do YOLO pré-treinado; classes fora dessa lista exigem um modelo customizado.
 - Segmentação e pose já aceitam vídeos curtos, ROI e progresso, mas ainda não possuem tracking/eventos; os resumos usam métricas por frame, máximos observados, área por classe e CSV por frame.
 - Vídeos processados são convertidos sob demanda para uma cópia `_web.mp4` em H.264/yuv420p quando exibidos no navegador.
-- Entrada por URL depende do tamanho ficar dentro do limite de download local. URLs do YouTube dependem do `yt-dlp`; Google Drive e Dropbox dependem de links públicos/baixáveis.
+- Entrada por URL depende do tamanho ficar dentro do limite de download local. YouTube depende do `yt-dlp` e pode ser bloqueado no Streamlit Cloud; Google Drive e Dropbox dependem de links públicos/baixáveis.
 - O projeto inclui centroide e ByteTrack, mas ambos ainda podem falhar com oclusão, cruzamentos complexos e câmera instável.
 - Ainda não há dataset real amplo anotado manualmente; a avaliação real atual é pequena e focada em ônibus.
 - A acurácia final não deve ser afirmada até haver amostra validada.

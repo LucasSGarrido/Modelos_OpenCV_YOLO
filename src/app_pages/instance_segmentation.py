@@ -89,7 +89,8 @@ def _render_controls(samples: list[Path]) -> tuple:
     media_url = st.text_input(
         "URL",
         value="",
-        placeholder="YouTube, Google Drive, Dropbox ou arquivo .mp4/.jpg",
+        placeholder="Link direto, Google Drive, Dropbox ou arquivo .mp4/.jpg",
+        help="No deploy, prefira link direto .mp4/.jpg, Google Drive público ou Dropbox. YouTube pode ser bloqueado por HTTP 403 no Streamlit Cloud.",
         key="segmentation_media_url",
     )
     render_input_source_status(uploaded_file, selected_sample, media_url)

@@ -25,6 +25,7 @@ reports/segmentation/*_20??????_??????_*
 *.mkv
 *.pt
 *.onnx
+!data/samples/bus_demo.mp4
 
 # Permite versionar arquivos de documentação nas pastas de saída.
 !reports/figures/.gitkeep

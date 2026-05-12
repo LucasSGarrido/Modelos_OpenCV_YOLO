@@ -13,7 +13,9 @@ import streamlit as st
 from object_counter.config import IMAGE_EXTENSIONS
 from object_counter.counting.roi import RegionOfInterest
 from object_counter.utils.downloads import (
+    YOUTUBE_BLOCKED_MESSAGE,
     download_media_url,
+    is_youtube_url,
     media_filename_from_url,
     streamlit_preview_url,
 )
@@ -261,6 +263,8 @@ def render_input_source_status(uploaded_file: Any, selected_sample: str, media_u
         "nenhuma": "nenhuma",
     }
     st.caption(f"Origem ativa: {labels[active]}")
+    if active == "url" and is_youtube_url(media_url):
+        st.warning(YOUTUBE_BLOCKED_MESSAGE)
     if ignored:
         ignored_labels = ", ".join(labels[source] for source in ignored)
         st.warning(f"Entradas ignoradas nesta execução: {ignored_labels}.")

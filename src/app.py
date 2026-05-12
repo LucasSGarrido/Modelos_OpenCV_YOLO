@@ -57,7 +57,7 @@ EVALUATION_DIR = PROJECT_ROOT / "reports" / "evaluation"
 HISTORY_PATH = APP_OUTPUT_DIR / "history.csv"
 SUPPORTED_MEDIA = {".jpg", ".jpeg", ".png", ".mp4", ".avi", ".mov"}
 HELP_TEXTS = {
-    "url": "URL de mídia. Aceita link direto, YouTube, Google Drive público ou Dropbox. Use apenas vídeos que você tem direito de processar.",
+    "url": "URL de mídia. No deploy, prefira link direto .mp4/.jpg, Google Drive público ou Dropbox. YouTube pode ser bloqueado por HTTP 403 no Streamlit Cloud.",
     "arquivo": "Envie uma imagem ou vídeo para processar. Formatos aceitos: JPG, PNG, MP4, AVI e MOV.",
     "amostra": "Usa um arquivo local em data/samples/ para testar sem precisar fazer upload.",
     "modelo": "Arquivo .pt com os pesos do YOLO. yolov8n.pt é rápido; modelos maiores tendem a ser mais precisos e mais lentos.",
@@ -657,7 +657,7 @@ def render_controls(samples: list[Path]) -> tuple:
     media_url = st.text_input(
         "URL",
         value="",
-        placeholder="YouTube, Google Drive, Dropbox ou arquivo .mp4/.jpg",
+        placeholder="Link direto, Google Drive, Dropbox ou arquivo .mp4/.jpg",
         help=HELP_TEXTS["url"],
     )
     render_input_source_status(uploaded_file, selected_sample, media_url)
